@@ -1,0 +1,22 @@
+.aboutme-section {
+  padding: 100px 20px;
+  background-color: #e8f3fd; /* Light peaceful background */
+  color: #333;
+  text-align: center;
+}
+
+.aboutme-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ff6f61;
+  margin-bottom: 20px;
+}
+
+.aboutme-text {
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 20px auto;
+  color: #555;
+}

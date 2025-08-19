@@ -1,0 +1,78 @@
+.skills-section {
+  padding: 100px 20px;
+  background-color: #eef6f9; /* Light calm background */
+  text-align: center;
+}
+
+.skills-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #42a5f5;
+  margin-bottom: 50px;
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+}
+
+.technical-skills, .soft-skills {
+  width: 320px;
+  text-align: left;
+}
+
+.technical-skills h3, .soft-skills h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.skill-bar-container {
+  margin-bottom: 15px;
+}
+
+.skill-bar-container p {
+  margin: 0;
+  font-weight: 500;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.skill-bar {
+  background-color: #d0e6fb;
+  height: 25px;
+  border-radius: 12px;
+  position: relative;
+}
+
+.skill-bar span {
+  position: absolute;
+  right: 10px;
+  top: 0;
+  color: #fff;
+  font-weight: 600;
+  line-height: 25px;
+}
+
+.soft-skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.soft-skill-badge {
+  background-color: #42a5f5;
+  color: #fff;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: transform 0.3s;
+}
+
+.soft-skill-badge:hover {
+  transform: scale(1.1);
+}
