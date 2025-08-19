@@ -8,7 +8,7 @@ const experiences = [
   {
     company: "XCoders",
     role: "ReactJS Developer Intern",
-    duration: "Jun 2025 - Aug 2025",
+    duration: "March 2025 - May 2025",
     description:
       "Worked on building responsive web applications using ReactJS, collaborating with a team to implement modern UI features and improve user experience.",
     certificate: xintern,
@@ -16,7 +16,7 @@ const experiences = [
   {
     company: "JYadahi",
     role: "Current Intern",
-    duration: "Aug 2025 - Present",
+    duration: "June 2025 - Present",
     description:
       "Currently contributing to frontend development projects, enhancing components with ReactJS, and learning advanced state management and performance optimization.",
     certificate: jintern,
