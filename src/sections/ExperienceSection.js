@@ -14,11 +14,11 @@ const experiences = [
     certificate: xintern,
   },
   {
-    company: "JYadahi",
-    role: "Current Intern",
+    company: "Jyadahi",
+    role: "Fullstack Intern",
     duration: "June 2025 - Present",
     description:
-      "Currently contributing to frontend development projects, enhancing components with ReactJS, and learning advanced state management and performance optimization.",
+      "Working as a Fullstack Intern with a focus on backend development using Node.js, Express, and MongoDB, while also integrating APIs with the frontend for seamless functionality.",
     certificate: jintern,
   },
 ];
