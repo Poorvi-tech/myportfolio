@@ -2,12 +2,45 @@
   padding: 80px 20px;
   background: linear-gradient(135deg, #fdfdfd, #e2e2f5);
   text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decorative gradient blobs */
+.experience-section::before,
+.experience-section::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.25;
+  z-index: 0;
+}
+
+/* Top-right soft shape */
+.experience-section::before {
+  width: 280px;
+  height: 280px;
+  background: #6c63ff;
+  top: -100px;
+  right: -100px;
+}
+
+/* Bottom-left soft shape */
+.experience-section::after {
+  width: 300px;
+  height: 300px;
+  background: #ff6f61;
+  bottom: -120px;
+  left: -120px;
 }
 
 .section-title {
   font-size: 2rem;
   margin-bottom: 40px;
   color: #6c63ff;
+  position: relative;
+  z-index: 1;
 }
 
 .experience-container {
@@ -15,6 +48,8 @@
   justify-content: center;
   gap: 30px;
   flex-wrap: wrap;
+  position: relative;
+  z-index: 1; /* content ke upar rahe */
 }
 
 .experience-card {
@@ -27,9 +62,10 @@
 }
 
 .experience-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.2);
 }
+
 
 .company-name {
   font-size: 1.4rem;

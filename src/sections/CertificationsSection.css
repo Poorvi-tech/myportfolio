@@ -1,7 +1,38 @@
 .certifications-section {
   padding: 100px 20px;
-  background-color: #f5f8fb; /* Light calm background for peace */
+  background: linear-gradient(135deg, #f5f8fb, #eaf3ff);
   text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decorative gradient blobs */
+.certifications-section::before,
+.certifications-section::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(140px);
+  opacity: 0.25;
+  z-index: 0;
+}
+
+/* Top-left soft shape */
+.certifications-section::before {
+  width: 300px;
+  height: 300px;
+  background: #42a5f5;
+  top: -120px;
+  left: -120px;
+}
+
+/* Bottom-right soft shape */
+.certifications-section::after {
+  width: 280px;
+  height: 280px;
+  background: #ff6f61;
+  bottom: -120px;
+  right: -120px;
 }
 
 .certifications-title {
@@ -9,6 +40,8 @@
   font-weight: 700;
   color: #42a5f5;
   margin-bottom: 50px;
+  position: relative;
+  z-index: 1;
 }
 
 .certifications-container {
@@ -16,6 +49,8 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
+  position: relative;
+  z-index: 1; /* content hamesha background ke upar rahe */
 }
 
 .cert-card {
@@ -29,7 +64,8 @@
 }
 
 .cert-card:hover {
-  transform: scale(1.05);
+  transform: scale(1.05) translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
 }
 
 .cert-name {

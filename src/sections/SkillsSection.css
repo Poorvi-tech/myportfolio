@@ -1,7 +1,36 @@
 .skills-section {
   padding: 100px 20px;
-  background-color: #eef6f9; /* Light calm background */
+  background: linear-gradient(135deg, #eef6f9, #dff2fb);
   text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decorative gradient blobs */
+.skills-section::before,
+.skills-section::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.25;
+  z-index: 0;
+}
+
+.skills-section::before {
+  width: 220px;
+  height: 220px;
+  background: #42a5f5;
+  top: -60px;
+  left: -100px;
+}
+
+.skills-section::after {
+  width: 250px;
+  height: 250px;
+  background: #ff6f61;
+  bottom: -100px;
+  right: -120px;
 }
 
 .skills-title {
@@ -9,6 +38,18 @@
   font-weight: 700;
   color: #42a5f5;
   margin-bottom: 50px;
+  position: relative;
+  z-index: 1;
+}
+
+.skills-title::after {
+  content: "";
+  display: block;
+  width: 90px;
+  height: 4px;
+  background: #42a5f5;
+  margin: 10px auto 0;
+  border-radius: 2px;
 }
 
 .skills-container {
@@ -16,6 +57,8 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 50px;
+  position: relative;
+  z-index: 1;
 }
 
 .technical-skills, .soft-skills {
@@ -31,7 +74,7 @@
 }
 
 .skill-bar-container {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 .skill-bar-container p {
@@ -46,6 +89,15 @@
   height: 25px;
   border-radius: 12px;
   position: relative;
+  overflow: hidden;
+}
+
+.skill-bar-fill {
+  background: linear-gradient(90deg, #42a5f5, #1e88e5);
+  height: 100%;
+  border-radius: 12px;
+  width: 0; /* default */
+  animation: fillBar 2s forwards;
 }
 
 .skill-bar span {
@@ -55,6 +107,11 @@
   color: #fff;
   font-weight: 600;
   line-height: 25px;
+}
+
+@keyframes fillBar {
+  from { width: 0; }
+  to { width: var(--fill, 80%); } /* set with inline CSS for each skill */
 }
 
 .soft-skills-list {
@@ -70,9 +127,10 @@
   border-radius: 20px;
   font-weight: 500;
   font-size: 0.95rem;
-  transition: transform 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .soft-skill-badge:hover {
   transform: scale(1.1);
+  box-shadow: 0 0 12px rgba(66, 165, 245, 0.5);
 }

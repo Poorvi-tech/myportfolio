@@ -1,17 +1,52 @@
 .aboutme-section {
   padding: 100px 20px;
-  background-color: #e8f3fd; /* Light peaceful background */
+  background: linear-gradient(135deg, #e8f3fd, #ffffff); /* gradient background */
   color: #333;
   text-align: center;
+  position: relative;
+  overflow: hidden;
 }
 
+/* Decorative soft blobs */
+.aboutme-section::before,
+.aboutme-section::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.3;
+  z-index: 0;
+}
+
+/* Top-left accent */
+.aboutme-section::before {
+  width: 250px;
+  height: 250px;
+  background: #6c63ff;
+  top: -80px;
+  left: -80px;
+}
+
+/* Bottom-right accent */
+.aboutme-section::after {
+  width: 300px;
+  height: 300px;
+  background: #ff6f61;
+  bottom: -100px;
+  right: -100px;
+}
+
+/* Title */
 .aboutme-title {
   font-size: 2.5rem;
   font-weight: 700;
   color: #ff6f61;
   margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
 }
 
+/* Paragraph */
 .aboutme-text {
   font-size: 1.1rem;
   font-weight: 400;
@@ -19,4 +54,6 @@
   max-width: 800px;
   margin: 20px auto;
   color: #555;
+  position: relative;
+  z-index: 1;
 }

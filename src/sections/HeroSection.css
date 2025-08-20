@@ -5,9 +5,54 @@
   flex-direction: column;
   text-align: center;
   padding: 80px 20px;
-  background: linear-gradient(135deg, #fdfdfd, #e6e6ff); /* subtle, peaceful gradient */
+  min-height: 100vh;
+  background: 
+    url("https://www.transparenttextures.com/patterns/leaves.png"), /* leaves pattern */
+    linear-gradient(135deg, #fdfdfd, #e6e6ff); /* base gradient */
+  background-size: 300px 300px, cover; /* leaves halka aur repeat honge */
+  background-attachment: fixed;
   color: #333;
-  min-height: 100vh; /* screen height ke hisaab se center */
+  position: relative;
+  overflow: hidden;
+}
+
+/* abstract design using pseudo elements */
+.hero-section::before,
+.hero-section::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.4;
+  z-index: 0;
+}
+
+/* top-left soft blob */
+.hero-section::before {
+  width: 300px;
+  height: 300px;
+  background: #6c63ff;
+  top: -100px;
+  left: -100px;
+}
+
+/* bottom-right soft blob */
+.hero-section::after {
+  width: 350px;
+  height: 350px;
+  background: #ff80ab;
+  bottom: -120px;
+  right: -120px;
+}
+
+/* z-index fix for content */
+.hero-photo-wrapper,
+.hero-name,
+.hero-designation,
+.hero-tagline,
+.hero-contacts {
+  position: relative;
+  z-index: 1;
 }
 
 .hero-photo-wrapper {
