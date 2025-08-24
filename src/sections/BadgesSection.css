@@ -66,12 +66,37 @@
   align-items: center;
   padding: 15px;
   border-radius: 15px;
-  background-color: #ffffff;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
   width: 150px;
   transition: transform 0.3s, box-shadow 0.3s;
   position: relative;
   z-index: 1;
+  color: #111;
+}
+
+/* 🎨 Pastel card colors */
+.badge-card:nth-child(1) {
+  background-color: #dbeafe; /* light blue */
+}
+
+.badge-card:nth-child(2) {
+  background-color: #dcfce7; /* light green */
+}
+
+.badge-card:nth-child(3) {
+  background-color: #fef9c3; /* light yellow */
+}
+
+.badge-card:nth-child(4) {
+  background-color: #fed7aa; /* light peach */
+}
+
+.badge-card:nth-child(5) {
+  background-color: #e9d5ff; /* lavender */
+}
+
+.badge-card:nth-child(6) {
+  background-color: #fbcfe8; /* pink */
 }
 
 .badge-card:hover {

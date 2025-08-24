@@ -54,13 +54,38 @@
 }
 
 .cert-card {
-  background-color: #ffffff;
   border-radius: 15px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
   padding: 25px;
   width: 280px;
   text-align: center;
   transition: all 0.3s ease;
+  color: #111;
+}
+
+/* 🎨 Pastel colors for cards */
+.cert-card:nth-child(1) {
+  background-color: #dbeafe; /* light blue */
+}
+
+.cert-card:nth-child(2) {
+  background-color: #dcfce7; /* light green */
+}
+
+.cert-card:nth-child(3) {
+  background-color: #fef9c3; /* light yellow */
+}
+
+.cert-card:nth-child(4) {
+  background-color: #fed7aa; /* light peach */
+}
+
+.cert-card:nth-child(5) {
+  background-color: #e9d5ff; /* lavender */
+}
+
+.cert-card:nth-child(6) {
+  background-color: #fbcfe8; /* pink */
 }
 
 .cert-card:hover {
@@ -83,7 +108,7 @@
 
 .cert-link {
   font-size: 0.9rem;
-  color: #42a5f5;
+  color: #1e40af;
   text-decoration: none;
   font-weight: 500;
 }

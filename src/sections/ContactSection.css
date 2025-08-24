@@ -67,19 +67,27 @@
 .contact-form input,
 .contact-form textarea {
   padding: 12px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
+  border: none;
+  border-radius: 10px;
   outline: none;
-  background: #fff;
-  color: #333;
+  background: linear-gradient(135deg, #dbeafe, #e0f7fa); /* pastel blue-cyan */
+  color: #111;
   font-size: 1rem;
   transition: all 0.3s ease;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #555;
+  opacity: 0.8;
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-  border-color: #42a5f5;
-  box-shadow: 0 0 8px rgba(66, 165, 245, 0.3);
+  background: linear-gradient(135deg, #ffe4f3, #dbeafe); /* soft pink-blue */
+  box-shadow: 0 0 12px rgba(255, 45, 149, 0.3), 0 0 8px rgba(66, 165, 245, 0.3);
+  transform: scale(1.02);
 }
 
 .contact-form button {

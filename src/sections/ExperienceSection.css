@@ -53,19 +53,27 @@
 }
 
 .experience-card {
-  background: #fff;
   padding: 25px 20px;
   border-radius: 12px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.1);
   width: 250px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #111;
+}
+
+/* 🎨 Apply pastel colors just like ProjectsSection */
+.experience-card:nth-child(1) {
+  background-color:  #fef9c3;
+}
+
+.experience-card:nth-child(2) {
+  background-color: #dcfce7; 
 }
 
 .experience-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 12px 25px rgba(0,0,0,0.2);
 }
-
 
 .company-name {
   font-size: 1.4rem;

@@ -54,7 +54,6 @@
 }
 
 .project-card {
-  background-color: #ffffff;
   padding: 25px;
   border-radius: 15px;
   width: 300px;
@@ -63,6 +62,32 @@
   transition: transform 0.3s, box-shadow 0.3s;
   position: relative;
   overflow: hidden;
+  color: #111;
+}
+
+/* 🎨 Soft pastel colors like in your image */
+.project-card:nth-child(1) {
+  background-color: #dbeafe; /* light blue */
+}
+
+.project-card:nth-child(2) {
+  background-color: #dcfce7; /* light green */
+}
+
+.project-card:nth-child(3) {
+  background-color: #fef9c3; /* light yellow */
+}
+
+.project-card:nth-child(4) {
+  background-color: #fed7aa; /* light peach/orange */
+}
+
+.project-card:nth-child(5) {
+  background-color: #e9d5ff; /* light lavender */
+}
+
+.project-card:nth-child(6) {
+  background-color: #fbcfe8; /* light pink */
 }
 
 /* Card hover glow effect */
@@ -85,7 +110,7 @@
 
 .project-links a {
   margin-right: 15px;
-  color: #42a5f5;
+  color: #000;
   font-weight: 600;
   text-decoration: none;
   transition: color 0.3s;
