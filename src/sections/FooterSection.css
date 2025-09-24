@@ -43,7 +43,7 @@
 .footer-content p {
   margin: 5px 0;
   color: #555; /* readable & soft */
-  font-size: 0.95rem;
+  font-size: 1.95rem;
 }
 
 /* Decorative bouncing dots */
@@ -53,8 +53,8 @@
 
 .footer-decor .dot {
   display: inline-block;
-  width: 8px;
-  height: 8px;
+  width: 10px;
+  height: 10px;
   margin: 0 4px;
   background-color: #6c63ff;
   border-radius: 50%;
@@ -82,7 +82,7 @@
   display: inline-block;
   margin: 0 10px;
   color: #6c63ff;
-  font-size: 1.4rem;
+  font-size: 3.4rem;
   transition: transform 0.3s, color 0.3s;
 }
 

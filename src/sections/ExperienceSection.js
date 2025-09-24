@@ -1,7 +1,8 @@
 import React from "react";
 import "./ExperienceSection.css";
 
-const jintern = "/assets/j-intern.pdf";
+const jintern = "/assets/j-intern.pdf"; // Project certificate (June - Sept)
+const jintern2 = "/assets/j-intern2.pdf";  // Internship certificate (current)
 const xintern = "/assets/x-intern.pdf";
 
 const experiences = [
@@ -16,10 +17,18 @@ const experiences = [
   {
     company: "Jyadahi",
     role: "Fullstack Intern",
-    duration: "June 2025 - Present",
+    duration: "June 2025 - July 2025",
     description:
-      "Working as a Fullstack Intern with a focus on backend development using Node.js, Express, and MongoDB, while also integrating APIs with the frontend for seamless functionality.",
+      "Completed a project as Fullstack Intern, focusing on backend development with Node.js, Express, MongoDB, and integrating frontend APIs.",
     certificate: jintern,
+  },
+  {
+    company: "Jyadahi",
+    role: "Fullstack Intern",
+    duration: "July 2025 - Present",
+    description:
+      "Currently working as a Fullstack Intern, completed another project, and improving fullstack functionalities. Also involved in mentoring new interns and code reviews.",
+    certificate: jintern2,
   },
 ];
 

@@ -67,7 +67,8 @@
   padding: 15px;
   border-radius: 15px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-  width: 150px;
+  width: 200px;
+  height: 200px;
   transition: transform 0.3s, box-shadow 0.3s;
   position: relative;
   z-index: 1;
@@ -105,8 +106,8 @@
 }
 
 .badge-image {
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 120px;
   object-fit: contain;
   margin-bottom: 10px;
   transition: transform 0.4s ease;

@@ -35,7 +35,7 @@
 }
 
 .contact-title {
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   margin-bottom: 20px;
   color: #ff2d95;
   text-shadow: 0 0 10px rgba(255, 45, 149, 0.3);
@@ -72,7 +72,7 @@
   outline: none;
   background: linear-gradient(135deg, #dbeafe, #e0f7fa); /* pastel blue-cyan */
   color: #111;
-  font-size: 1rem;
+  font-size: 2rem;
   transition: all 0.3s ease;
   box-shadow: 0 3px 10px rgba(0,0,0,0.08);
 }
@@ -91,7 +91,7 @@
 }
 
 .contact-form button {
-  padding: 12px;
+  padding: 16px;
   background: linear-gradient(90deg, #42a5f5, #1e88e5);
   border: none;
   border-radius: 8px;

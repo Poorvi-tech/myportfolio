@@ -88,6 +88,18 @@
   background-color: #fbcfe8; /* pink */
 }
 
+.cert-card:nth-child(7) {
+  background-color: #dbeafe; /* light blue */
+}
+
+.cert-card:nth-child(8) {
+  background-color: #dcfce7; /* light green */
+}
+
+.cert-card:nth-child(9) {
+  background-color: #fef9c3; /* light yellow */
+}
+
 .cert-card:hover {
   transform: scale(1.05) translateY(-5px);
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);

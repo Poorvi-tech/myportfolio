@@ -7,6 +7,11 @@ const recommend = "/assets/recommend.pdf";
 const react = "/assets/react.pdf";
 const dsa = "/assets/dsa.pdf";
 const java = "/assets/java.pdf";
+const data_analytics = "/assets/data_analytics.pdf";
+const databrics = "/assets/databrics.pdf";
+const gemini = "/assets/gemini.pdf";
+const generative_AI = "/assets/generative_AI.pdf";
+const prompt_engineering = "/assets/prompt_engineering.pdf";
 
 const certifications = [
   {
@@ -28,6 +33,31 @@ const certifications = [
     name: "Recommendation Letter",
     provider: "Jayadhi Limited / Magorix Pvt. Ltd.",
     link: recommend,
+  },
+  {
+    name: "Data Analytics with Generative AI",
+    provider: "JSimplilearn",
+    link: data_analytics,
+  },
+  {
+    name: "Get Started with Databricks for GenerativeAI",
+    provider: "databrics",
+    link: databrics,
+  },
+  {
+    name: "Gemini for Google Workspace",
+    provider: "Google Cloud",
+    link: gemini,
+  },
+  {
+    name: "Introduction to Generative AI",
+    provider: "Google Cloud",
+    link: generative_AI,
+  },
+  {
+    name: "Introduction to Prompt Engineering withGitHub Copilot",
+    provider: "Microsoft",
+    link: prompt_engineering,
   },
 ];
 
@@ -61,7 +91,7 @@ const CertificationsSection = () => {
               rel="noopener noreferrer"
               className="cert-link"
             >
-              View Certificate / Recommendation
+              View Certificate 
             </a>
           </motion.div>
         ))}
