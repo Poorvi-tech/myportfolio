@@ -15,7 +15,7 @@ const experiences = [
     certificate: xintern,
   },
   {
-    company: "Jyadahi",
+    company: "Jayadhi",
     role: "Fullstack Intern",
     duration: "June 2025 - July 2025",
     description:
@@ -23,7 +23,7 @@ const experiences = [
     certificate: jintern,
   },
   {
-    company: "Jyadahi",
+    company: "Jayadhi",
     role: "Fullstack Intern",
     duration: "July 2025 - Present",
     description:
