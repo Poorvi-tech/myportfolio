@@ -1,6 +1,7 @@
+/* Experience Section */
 .experience-section {
-  padding: 80px 20px;
-  background: linear-gradient(135deg, #fdfdfd, #e2e2f5);
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #eef6f9, #ddefff);
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -12,105 +13,286 @@
   content: "";
   position: absolute;
   border-radius: 50%;
-  filter: blur(120px);
+  filter: blur(150px);
   opacity: 0.25;
   z-index: 0;
 }
 
-/* Top-right soft shape */
+/* Top-left blob */
 .experience-section::before {
   width: 280px;
   height: 280px;
-  background: #6c63ff;
-  top: -100px;
-  right: -100px;
+  background: #42a5f5;
+  top: -120px;
+  left: -100px;
 }
 
-/* Bottom-left soft shape */
+/* Bottom-right blob */
 .experience-section::after {
   width: 300px;
   height: 300px;
   background: #ff6f61;
-  bottom: -120px;
-  left: -120px;
+  bottom: -150px;
+  right: -120px;
 }
 
 .section-title {
-  font-size: 3rem;
-  margin-bottom: 40px;
-  color: #6c63ff;
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #42a5f5;
+  margin-bottom: 50px;
   position: relative;
   z-index: 1;
+  background: linear-gradient(135deg, #42a5f5, #6c63ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 5px;
+  background: linear-gradient(90deg, #42a5f5, #6c63ff);
+  border-radius: 3px;
 }
 
 .experience-container {
   display: flex;
-  justify-content: center;
-  gap: 30px;
   flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
   position: relative;
-  z-index: 1; /* content ke upar rahe */
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .experience-card {
-  padding: 25px 20px;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-  width: 250px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 25px;
+  border-radius: 20px;
+  width: 320px;
+  text-align: left;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
   color: #111;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7));
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  flex-direction: column;
 }
 
-/* 🎨 Apply pastel colors just like ProjectsSection */
+/* Enhanced card design with gradient borders */
+.experience-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, #42a5f5, #6c63ff);
+  z-index: -1;
+  border-radius: 20px;
+  padding: 2px;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+}
+
+/* 🎨 Enhanced soft pastel colors with gradient effects */
 .experience-card:nth-child(1) {
-  background-color:  #fef9c3;
+  background: linear-gradient(135deg, #dbeafe, #c1d8f5);
 }
 
 .experience-card:nth-child(2) {
-  background-color: #dcfce7; 
+  background: linear-gradient(135deg, #dcfce7, #c1f0d5);
 }
 
+.experience-card:nth-child(3) {
+  background: linear-gradient(135deg, #fef9c3, #f5f0a0);
+}
+
+.experience-card:nth-child(4) {
+  background: linear-gradient(135deg, #fed7aa, #f5c78a);
+}
+
+/* Enhanced Card hover effects */
 .experience-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+  transform: translateY(-15px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(66, 165, 245, 0.4);
 }
 
 .company-name {
-  font-size: 1.7rem;
-  font-weight: 600;
-  color: #5243c2;
-  margin-bottom: 10px;
+  font-size: 1.8rem;
+  color: #333;
+  margin: 0 0 10px 0;
+  font-weight: 700;
 }
 
 .role {
-  font-size: 1.4rem;
-  color: #333;
-  margin-bottom: 5px;
+  font-size: 1.2rem;
+  color: #42a5f5;
+  margin: 0 0 10px 0;
+  font-weight: 600;
 }
 
 .duration {
-  font-size: 1.2rem;
-  color: #777;
+  display: inline-block;
+  padding: 5px 12px;
+  background: linear-gradient(135deg, #42a5f5, #6c63ff);
+  color: white;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
   margin-bottom: 15px;
-}
-
-.certificate-link {
-  text-decoration: none;
-  color: #fff;
-  background: #6c63ff;
-  padding: 9px 16px;
-  border-radius: 8px;
-  font-weight: 500;
-  transition: all 0.3s ease;
-}
-
-.certificate-link:hover {
-  background: #5243c2;
 }
 
 .description {
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   color: #555;
   margin-bottom: 15px;
+  line-height: 1.5;
+  flex-grow: 1;
+}
+
+.expand-toggle {
+  text-align: center;
+  padding: 8px;
+  background: rgba(66, 165, 245, 0.1);
+  border-radius: 10px;
+  margin: 10px 0;
+  cursor: pointer;
+  font-weight: 600;
+  color: #42a5f5;
+  transition: all 0.3s ease;
+}
+
+.expand-toggle:hover {
+  background: rgba(66, 165, 245, 0.2);
+}
+
+.experience-details {
+  margin: 15px 0;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.experience-details p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 10px;
   line-height: 1.4;
+}
+
+.experience-details strong {
+  color: #333;
+}
+
+.certificate-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #42a5f5, #6c63ff);
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(66, 165, 245, 0.3);
+  margin-top: auto;
+}
+
+.certificate-link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: 0.5s;
+}
+
+.certificate-link:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(108, 99, 255, 0.5);
+}
+
+.certificate-link:hover::before {
+  left: 100%;
+}
+
+@media (max-width: 768px) {
+  .experience-container {
+    gap: 25px;
+  }
+  
+  .experience-section {
+    padding: 60px 15px;
+  }
+  
+  .section-title {
+    font-size: 2.8rem;
+  }
+  
+  .experience-card {
+    width: 100%;
+    max-width: 350px;
+    padding: 20px;
+  }
+  
+  .company-name {
+    font-size: 1.6rem;
+  }
+  
+  .role {
+    font-size: 1.1rem;
+  }
+  
+  .description {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .experience-section {
+    padding: 50px 10px;
+  }
+  
+  .section-title {
+    font-size: 2.3rem;
+  }
+  
+  .experience-card {
+    padding: 15px;
+  }
+  
+  .company-name {
+    font-size: 1.5rem;
+  }
+  
+  .role {
+    font-size: 1rem;
+  }
+  
+  .description {
+    font-size: 0.9rem;
+  }
+  
+  .experience-details p {
+    font-size: 0.9rem;
+  }
 }

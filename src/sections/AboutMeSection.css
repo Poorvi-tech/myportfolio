@@ -1,59 +1,112 @@
 .aboutme-section {
   padding: 100px 20px;
-  background: linear-gradient(135deg, #e8f3fd, #ffffff); /* gradient background */
+  background: linear-gradient(135deg, #e8f3fd, #ffffff);
   color: #333;
   text-align: center;
   position: relative;
   overflow: hidden;
 }
 
-/* Decorative soft blobs */
+/* Enhanced decorative soft blobs */
 .aboutme-section::before,
 .aboutme-section::after {
   content: "";
   position: absolute;
   border-radius: 50%;
   filter: blur(100px);
-  opacity: 0.3;
+  opacity: 0.4;
   z-index: 0;
+  animation: float 7s ease-in-out infinite;
 }
 
 /* Top-left accent */
 .aboutme-section::before {
-  width: 250px;
-  height: 250px;
-  background: #6c63ff;
-  top: -80px;
-  left: -80px;
+  width: 350px;
+  height: 350px;
+  background: linear-gradient(135deg, #6c63ff, #42a5f5);
+  top: -120px;
+  left: -120px;
+  animation-delay: 1s;
 }
 
 /* Bottom-right accent */
 .aboutme-section::after {
-  width: 300px;
-  height: 300px;
-  background: #ff6f61;
-  bottom: -100px;
-  right: -100px;
+  width: 400px;
+  height: 400px;
+  background: linear-gradient(135deg, #ff6f61, #ff80ab);
+  bottom: -150px;
+  right: -150px;
+  animation-delay: 3s;
 }
 
 /* Title */
 .aboutme-title {
   font-size: 4.5rem;
-  font-weight: 700;
-  color: #ff6f61;
-  margin-bottom: 20px;
+  font-weight: 800;
+  margin-bottom: 30px;
   position: relative;
   z-index: 1;
+  background: linear-gradient(135deg, #ff6f61, #6c63ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.aboutme-title::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 5px;
+  background: linear-gradient(90deg, #ff6f61, #6c63ff);
+  border-radius: 3px;
 }
 
 /* Paragraph */
 .aboutme-text {
-  font-size: 1.7rem;
+  font-size: 1.8rem;
   font-weight: 400;
   line-height: 1.8;
-  max-width: 800px;
-  margin: 20px auto;
+  max-width: 900px;
+  margin: 30px auto;
   color: #555;
   position: relative;
   z-index: 1;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.6));
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(5px);
+}
+
+/* Enhanced animations */
+@keyframes float {
+  0% { transform: translate(0, 0); }
+  50% { transform: translate(10px, 15px); }
+  100% { transform: translate(0, 0); }
+}
+
+/* Responsive improvements */
+@media (max-width: 768px) {
+  .aboutme-title {
+    font-size: 3.5rem;
+  }
+  
+  .aboutme-text {
+    font-size: 1.5rem;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .aboutme-title {
+    font-size: 2.8rem;
+  }
+  
+  .aboutme-text {
+    font-size: 1.3rem;
+    padding: 15px;
+  }
 }

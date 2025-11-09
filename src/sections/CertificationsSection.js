@@ -8,7 +8,7 @@ const react = "/assets/react.pdf";
 const dsa = "/assets/dsa.pdf";
 const java = "/assets/java.pdf";
 const data_analytics = "/assets/data_analytics.pdf";
-const databrics = "/assets/databrics.pdf";
+const databricks = "/assets/databricks.pdf";
 const gemini = "/assets/gemini.pdf";
 const generative_AI = "/assets/generative_AI.pdf";
 const prompt_engineering = "/assets/prompt_engineering.pdf";
@@ -42,7 +42,7 @@ const certifications = [
   {
     name: "Get Started with Databricks for GenerativeAI",
     provider: "databrics",
-    link: databrics,
+    link: databricks,
   },
   {
     name: "Gemini for Google Workspace",
