@@ -1,112 +1,79 @@
-.aboutme-section {
-  padding: 100px 20px;
-  background: linear-gradient(135deg, #e8f3fd, #ffffff);
-  color: #333;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
+/* ========================================
+   ABOUT ME SECTION
+   ======================================== */
+.about-content {
+  max-width: 100%;
 }
 
-/* Enhanced decorative soft blobs */
-.aboutme-section::before,
-.aboutme-section::after {
-  content: "";
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(100px);
-  opacity: 0.4;
-  z-index: 0;
-  animation: float 7s ease-in-out infinite;
+.about-intro {
+  font-size: 1rem;
+  color: var(--text-primary);
+  line-height: 1.7;
+  margin-bottom: 28px;
 }
 
-/* Top-left accent */
-.aboutme-section::before {
-  width: 350px;
-  height: 350px;
-  background: linear-gradient(135deg, #6c63ff, #42a5f5);
-  top: -120px;
-  left: -120px;
-  animation-delay: 1s;
+.about-intro strong {
+  color: var(--primary);
+  font-weight: 700;
 }
 
-/* Bottom-right accent */
-.aboutme-section::after {
-  width: 400px;
-  height: 400px;
-  background: linear-gradient(135deg, #ff6f61, #ff80ab);
-  bottom: -150px;
-  right: -150px;
-  animation-delay: 3s;
+.about-highlights {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
 }
 
-/* Title */
-.aboutme-title {
-  font-size: 4.5rem;
-  font-weight: 800;
-  margin-bottom: 30px;
-  position: relative;
-  z-index: 1;
-  background: linear-gradient(135deg, #ff6f61, #6c63ff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+.highlight-card {
+  padding: 20px;
+  background: var(--bg-main);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-light);
+  transition: all var(--transition-normal);
 }
 
-.aboutme-title::after {
-  content: '';
-  position: absolute;
-  bottom: -15px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 120px;
-  height: 5px;
-  background: linear-gradient(90deg, #ff6f61, #6c63ff);
-  border-radius: 3px;
+.highlight-card:hover {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 1px var(--primary);
 }
 
-/* Paragraph */
-.aboutme-text {
-  font-size: 1.8rem;
-  font-weight: 400;
-  line-height: 1.8;
-  max-width: 900px;
-  margin: 30px auto;
-  color: #555;
-  position: relative;
-  z-index: 1;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.6));
-  padding: 30px;
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-  backdrop-filter: blur(5px);
+.highlight-icon {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--primary-bg);
+  color: var(--primary);
+  border-radius: var(--radius-sm);
+  font-size: 1rem;
+  margin-bottom: 12px;
 }
 
-/* Enhanced animations */
-@keyframes float {
-  0% { transform: translate(0, 0); }
-  50% { transform: translate(10px, 15px); }
-  100% { transform: translate(0, 0); }
+.highlight-card h4 {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 6px;
 }
 
-/* Responsive improvements */
+.highlight-card p {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.about-text {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
 @media (max-width: 768px) {
-  .aboutme-title {
-    font-size: 3.5rem;
-  }
-  
-  .aboutme-text {
-    font-size: 1.5rem;
-    padding: 20px;
-  }
-}
-
-@media (max-width: 480px) {
-  .aboutme-title {
-    font-size: 2.8rem;
-  }
-  
-  .aboutme-text {
-    font-size: 1.3rem;
-    padding: 15px;
+  .about-highlights {
+    grid-template-columns: 1fr;
   }
 }

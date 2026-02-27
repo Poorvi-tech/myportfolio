@@ -1,202 +1,89 @@
-.badges-section {
-  padding: 100px 20px;
-  background: linear-gradient(135deg, #f9f9f9, #eaf6ff);
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-}
-
-/* Enhanced decorative gradient blobs */
-.badges-section::before,
-.badges-section::after {
-  content: "";
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(120px);
-  opacity: 0.3;
-  z-index: 0;
-  animation: float 9s ease-in-out infinite;
-}
-
-.badges-section::before {
-  width: 300px;
-  height: 300px;
-  background: linear-gradient(135deg, #42a5f5, #6c63ff);
-  top: -120px;
-  left: -150px;
-  animation-delay: 1s;
-}
-
-.badges-section::after {
-  width: 350px;
-  height: 350px;
-  background: linear-gradient(135deg, #ff6f61, #ff80ab);
-  bottom: -150px;
-  right: -180px;
-  animation-delay: 3s;
-}
-
-.badges-title {
-  font-size: 3.5rem;
-  font-weight: 800;
-  margin-bottom: 50px;
-  position: relative;
-  z-index: 1;
-  background: linear-gradient(135deg, #42a5f5, #6c63ff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.badges-title::after {
-  content: '';
-  position: absolute;
-  bottom: -15px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100px;
-  height: 5px;
-  background: linear-gradient(90deg, #42a5f5, #6c63ff);
-  border-radius: 3px;
-}
-
-.badges-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 40px;
-  position: relative;
-  z-index: 1;
-  max-width: 1200px;
-  margin: 0 auto;
+/* ========================================
+   BADGES SECTION
+   ======================================== */
+.badges-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
 }
 
 .badge-card {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  padding: 25px 15px;
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  width: 220px;
-  height: 220px;
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  gap: 14px;
+  padding: 16px 18px;
+  background: var(--bg-main);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  color: inherit;
   position: relative;
-  z-index: 1;
-  color: #111;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7));
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  overflow: hidden;
-}
-
-/* Enhanced card design with gradient borders */
-.badge-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(135deg, #42a5f5, #6c63ff);
-  z-index: -1;
-  border-radius: 20px;
-  padding: 2px;
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: destination-out;
-  mask-composite: exclude;
-}
-
-/* 🎨 Enhanced pastel colors with gradient effects */
-.badge-card:nth-child(1) {
-  background: linear-gradient(135deg, #dbeafe, #c1d8f5);
-}
-
-.badge-card:nth-child(2) {
-  background: linear-gradient(135deg, #dcfce7, #c1f0d5);
-}
-
-.badge-card:nth-child(3) {
-  background: linear-gradient(135deg, #fef9c3, #f5f0a0);
-}
-
-.badge-card:nth-child(4) {
-  background: linear-gradient(135deg, #fed7aa, #f5c78a);
-}
-
-.badge-card:nth-child(5) {
-  background: linear-gradient(135deg, #e9d5ff, #d4b8f5);
-}
-
-.badge-card:nth-child(6) {
-  background: linear-gradient(135deg, #fbcfe8, #f0b5d5);
 }
 
 .badge-card:hover {
-  transform: translateY(-15px) scale(1.08);
-  box-shadow: 0 20px 40px rgba(66, 165, 245, 0.3);
+  border-color: var(--primary);
 }
 
-.badge-image {
-  width: 140px;
-  height: 140px;
+.badge-img-wrapper {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.badge-img {
+  width: 48px;
+  height: 48px;
   object-fit: contain;
-  margin-bottom: 15px;
-  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.1));
+  border-radius: 4px;
 }
 
-.badge-card:hover .badge-image {
-  transform: rotate(15deg) scale(1.2);
-  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.2));
+.badge-info {
+  flex: 1;
+  min-width: 0;
 }
 
-/* Enhanced animations */
-@keyframes float {
-  0% { transform: translate(0, 0); }
-  50% { transform: translate(12px, 18px); }
-  100% { transform: translate(0, 0); }
+.badge-name {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-/* Responsive improvements */
+.badge-platform {
+  font-size: 0.75rem;
+  color: var(--text-tertiary);
+}
+
+.badge-ext-icon {
+  font-size: 0.7rem;
+  color: var(--text-tertiary);
+  flex-shrink: 0;
+  opacity: 0;
+  transition: opacity var(--transition-fast);
+}
+
+.badge-card:hover .badge-ext-icon {
+  opacity: 1;
+  color: var(--primary);
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
 @media (max-width: 768px) {
-  .badges-container {
-    gap: 30px;
-  }
-  
-  .badge-card {
-    width: 180px;
-    height: 180px;
-  }
-  
-  .badge-image {
-    width: 100px;
-    height: 100px;
-  }
-  
-  .badges-title {
-    font-size: 2.8rem;
+  .badges-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 480px) {
-  .badges-container {
-    gap: 20px;
-  }
-  
-  .badge-card {
-    width: 150px;
-    height: 150px;
-    padding: 15px 10px;
-  }
-  
-  .badge-image {
-    width: 80px;
-    height: 80px;
-  }
-  
-  .badges-title {
-    font-size: 2.3rem;
+  .badges-grid {
+    grid-template-columns: 1fr;
   }
 }
