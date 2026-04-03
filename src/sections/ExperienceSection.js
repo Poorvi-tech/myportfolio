@@ -5,19 +5,20 @@ import "./ExperienceSection.css";
 const jintern = "/assets/j-intern.pdf";
 const jintern2 = "/assets/j-intern2.pdf";
 const jintern3 = "/assets/j-intern3.pdf";
+const jintern4 = "/assets/j-intern4.pdf";
 const xintern = "/assets/x-intern.pdf";
 
 const experiences = [
   {
     company: "Jayadhi",
     role: "Fullstack Developer Intern",
-    duration: "Sep 2025 – Present",
+    duration: "Sep 2025 – March 2026",
     type: "Remote · Stipend-based",
-    description: "Currently working as a Fullstack Developer Intern on company projects, handling both backend and frontend development.",
-    certificate: jintern3,
+    description: "Completed a 6-month internship as a Fullstack Developer, handling both backend and frontend development. Earned a monthly stipend of ₹5,000.",
+    certificate: jintern4,
     skills: ["Fullstack Development", "Mentoring", "Code Reviews", "Project Management"],
     achievements: ["Mentoring 3 new interns", "Leading code reviews", "Contributing to 5+ projects"],
-    isCurrent: true,
+    isCurrent: false,
   },
   {
     company: "Jayadhi",

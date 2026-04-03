@@ -11,6 +11,7 @@ const databricks = "/assets/databricks.pdf";
 const gemini = "/assets/gemini.pdf";
 const generative_AI = "/assets/generative_AI.pdf";
 const prompt_engineering = "/assets/prompt_engineering.pdf";
+const jintern4 = "/assets/j-intern4.pdf";
 
 const certifications = [
   { name: "Programming in Java", provider: "NPTEL (IIT Kharagpur)", link: java, category: "Programming" },
@@ -22,6 +23,7 @@ const certifications = [
   { name: "Gemini for Google Workspace", provider: "Google Cloud", link: gemini, category: "Cloud" },
   { name: "Introduction to Generative AI", provider: "Google Cloud", link: generative_AI, category: "AI/ML" },
   { name: "Prompt Engineering with GitHub Copilot", provider: "Microsoft", link: prompt_engineering, category: "AI/ML" },
+  { name: "Internship Completion Certificate", provider: "Jayadhi Limited", link: jintern4, category: "Professional" },
 ];
 
 const CertificationsSection = () => {
